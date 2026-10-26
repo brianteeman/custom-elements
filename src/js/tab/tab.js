@@ -146,7 +146,7 @@ class TabsElement extends HTMLElement {
 
       // Create tab button
       const tabButton = document.createElement('button');
-      tabButton.setAttribute('id', `${tab.id}-tab`);
+      tabButton.setAttribute('id', tab.id + '-tab');
       tabButton.setAttribute('aria-selected', !!tab.hasAttribute('active'));
       tabButton.setAttribute('aria-controls', tab.id);
       tabButton.setAttribute('role', 'tab');
@@ -332,7 +332,7 @@ class TabsElement extends HTMLElement {
 
     // Create tab button
     const tabButton = document.createElement('button');
-    tabButton.setAttribute('id', `${tab.id}-tab`);
+    tabButton.setAttribute('id', tab.id + '-tab');
     tab.setAttribute('aria-labelledby', tabButton.id);
     tabButton.setAttribute('aria-expanded', !!tab.hasAttribute('active'));
     tabButton.setAttribute('aria-controls', tab.id);
